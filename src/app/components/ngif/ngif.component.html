@@ -1,0 +1,24 @@
+<h1 class="container bg-dark text-white text-center my-4 py-4">ngIf = {{show}}</h1>
+<div class="container">
+    <button type="button" class="btn btn-outline-primary" class="btn btn-warning" (click)="show=!show">Acción</button>
+    <p class="text-info" *ngIf="show">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+    <p class="text-danger">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+</div>
+
+<h2 class="container bg-dark text-white text-center my-4 py-4">else = {{show}}</h2>
+<div class="container">
+    <button type="button" class="btn btn-outline-primary" class="btn btn-warning" (click)="show=!show">Acción</button>
+    <p class="text-info" *ngIf="show; else showDos">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+
+    <ng-template #showDos>
+        <p class="text-danger">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+    </ng-template>    
+</div>
